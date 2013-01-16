@@ -13,8 +13,10 @@ int main()
     
     int x = x2 - x1;
     int y = y2 - y1;
-    int len = (int)sqrt(double(x*x + y*y));
-    if(len < (r1 + r2)) out << "YES";
+    int len = r1 + r2;
+    int len1 = r1 - r2;
+    if(len*len >= x*x + y*y &&
+       len1*len1 <= x*x + y*y) out << "YES";
     else out << "NO";
     return 0;
 }
